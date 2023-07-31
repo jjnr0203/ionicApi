@@ -1,15 +1,31 @@
-<div class="container">
-  <div id="img-home" class="text-center">
-
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png">
-  
+<div class="scrollable-section">
+<div class="container mb-5 main container">
+  <div class="text-center">
+    <img class="img-fluid animate_animated animate_tada" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt="Pokémon Logo">
   </div>
-  <div class="card-columns" *ngFor="let pokemon of pokemones">
-    <div class="card">
-      <div class="card-header">
-        {{pokemon.name }}
+  <br>
+  <div>
+    <div class="row">
+      <div class="card-columns">
+        <div class="card fadein animate__animated animate__fadeIn" *ngFor="let pokemon of pokemones">
+          <div class="card-header bg-dark">
+            <h2>{{ pokemon.name }}</h2>
+          </div>
+          <img class="card-img-top img-card" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png" alt="Pokébola"
+          (click)='onClickPokemon(pokemon.name)'
+          >
+        </div>
       </div>
-      <img src="..." class="card-img-top" alt="...">
     </div>
   </div>
+</div>
+
+<div class="d-flex justify-content-center mt-5">
+  <button type="button" class="btn btn-success float-Left btn-Large btnPagina" (click)="paginarPrevious()" [disabled]="btnActive">
+    Previous
+  </button>
+  <button type="button" class="btn btn-success float-Right btn-Large btnPagina" (click)="paginarNext()">
+    Next
+  </button>
+</div>
 </div>

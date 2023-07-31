@@ -1,15 +1,65 @@
-.container{
-    display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    height: 45vh;
+/* Estilos para el contenedor */
+.container {
+    max-width: 1200px;
+    padding: 10vh;
+  }
+  
+  /* Estilos para el logo */
+  .img-fluid {
+    max-width: 300px;
+  }
+  
+  /* Estilos para las tarjetas */
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-img-top{
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .card-body {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Estilos para el scroll */
+  .scrollable-section  {
+    max-height: 100%; /* Altura máxima de la sección scrollable */
+    overflow-y: auto; /* Agrega scroll vertical si el contenido excede la altura máxima */
+  }
+  
+  /* Estilos para los botones */
+  .btnPagina {
+    margin: 0 10px;
+  }
+.main-container {
+   padding: 50vh;
 }
 
-#img-home{
-    max-width: 40%;
-    max-height: 40%;
-
+.btnPagina{
+  width: 120px;
 }
-body{
-    background-color: black;
+
+.fadein img{
+  opacity: 0.5;
+  transition: 2s ease;
+}
+
+.fadein img:hover{
+  opacity: 2;
+  transition: 2s ease;
+}
+.animate__animated animate__fadeIn{
+  --animate-duration: 3s;
 }

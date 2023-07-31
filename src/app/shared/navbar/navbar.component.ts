@@ -9,6 +9,14 @@ export class NavbarComponent  implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
+  regresar(){
+    location.href= 'home' ;
+  }
+  buscar(texto:string){
+    console.log(texto)
+  }
 
 }
